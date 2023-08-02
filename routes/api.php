@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\PessoasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('pessoas', 'API\PessoasController');
+Route::apiResource('pessoas', PessoasController::class);
