@@ -16,20 +16,20 @@ class PessoasTableSeeder extends Seeder
     {
         $faker = Faker::create('pt_BR');
         DB::table('pessoas')->insert([
-            ['Nome' => 'Jorge da Silva', 'CPF' => $faker->cpf(false), 'E-mail' => 'jorge@terra.com.br', 'Categoria' => 1],
-            ['Nome' => 'Flavia Monteiro', 'CPF' => $faker->cpf(false), 'E-mail' => 'flavia@globo.com', 'Categoria' => 2],
-            ['Nome' => 'Marcos Frota Ribeiro', 'CPF' => $faker->cpf(false), 'E-mail' => 'ribeiro@gmail.com', 'Categoria' => 2],
-            ['Nome' => 'Raphael Souza Santos', 'CPF' => $faker->cpf(false), 'E-mail' => 'rsantos@gmail.com', 'Categoria' => 1],
-            ['Nome' => 'Pedro Paulo Mota', 'CPF' => $faker->cpf(false), 'E-mail' => 'ppmota@gmail.com', 'Categoria' => 1],
-            ['Nome' => 'Winder Carvalho da Silva', 'CPF' => $faker->cpf(false), 'E-mail' => 'winder@hotmail.com', 'Categoria' => 3],
-            ['Nome' => 'Maria da Penha Albuquerque', 'CPF' => $faker->cpf(false), 'E-mail' => 'mpa@hotmail.com', 'Categoria' => 3],
-            ['Nome' => 'Rafael Garcia Souza', 'CPF' => $faker->cpf(false), 'E-mail' => 'rgsouza@hotmail.com', 'Categoria' => 3],
-            ['Nome' => 'Tabata Costa', 'CPF' => $faker->cpf(false), 'E-mail' => 'tabata_costa@gmail.com', 'Categoria' => 2],
-            ['Nome' => 'Ronil Camarote', 'CPF' => $faker->cpf(false), 'E-mail' => 'camarote@terra.com.br', 'Categoria' => 1],
-            ['Nome' => 'Joaquim Barbosa', 'CPF' => $faker->cpf(false), 'E-mail' => 'barbosa@globo.com', 'Categoria' => 1],
-            ['Nome' => 'Eveline Maria Alcantra', 'CPF' => $faker->cpf(false), 'E-mail' => 'ev_alcantra@gmail.com', 'Categoria' => 2],
-            ['Nome' => 'João Paulo Vieira', 'CPF' => $faker->cpf(false), 'E-mail' => 'jpvieria@gmail.com', 'Categoria' => 1],
-            ['Nome' => 'Carla Zamborlini', 'CPF' => $faker->cpf(false), 'E-mail' => 'zamborlini@terra.com.br', 'Categoria' => 3],
+            ['nome' => 'Jorge da Silva', 'cpf' => $faker->cpf(false), 'email' => 'jorge@terra.com.br', 'categoria' => 1],
+            ['nome' => 'Flavia Monteiro', 'cpf' => $faker->cpf(false), 'email' => 'flavia@globo.com', 'categoria' => 2],
+            ['nome' => 'Marcos Frota Ribeiro', 'cpf' => $faker->cpf(false), 'email' => 'ribeiro@gmail.com', 'categoria' => 2],
+            ['nome' => 'Raphael Souza Santos', 'cpf' => $faker->cpf(false), 'email' => 'rsantos@gmail.com', 'categoria' => 1],
+            ['nome' => 'Pedro Paulo Mota', 'cpf' => $faker->cpf(false), 'email' => 'ppmota@gmail.com', 'categoria' => 1],
+            ['nome' => 'Winder Carvalho da Silva', 'cpf' => $faker->cpf(false), 'email' => 'winder@hotmail.com', 'categoria' => 3],
+            ['nome' => 'Maria da Penha Albuquerque', 'cpf' => $faker->cpf(false), 'email' => 'mpa@hotmail.com', 'categoria' => 3],
+            ['nome' => 'Rafael Garcia Souza', 'cpf' => $faker->cpf(false), 'email' => 'rgsouza@hotmail.com', 'categoria' => 3],
+            ['nome' => 'Tabata Costa', 'cpf' => $faker->cpf(false), 'email' => 'tabata_costa@gmail.com', 'categoria' => 2],
+            ['nome' => 'Ronil Camarote', 'cpf' => $faker->cpf(false), 'email' => 'camarote@terra.com.br', 'categoria' => 1],
+            ['nome' => 'Joaquim Barbosa', 'cpf' => $faker->cpf(false), 'email' => 'barbosa@globo.com', 'categoria' => 1],
+            ['nome' => 'Eveline Maria Alcantra', 'cpf' => $faker->cpf(false), 'email' => 'ev_alcantra@gmail.com', 'categoria' => 2],
+            ['nome' => 'João Paulo Vieira', 'cpf' => $faker->cpf(false), 'email' => 'jpvieria@gmail.com', 'categoria' => 1],
+            ['nome' => 'Carla Zamborlini', 'cpf' => $faker->cpf(false), 'email' => 'zamborlini@terra.com.br', 'categoria' => 3],
         ]);
     }
 }

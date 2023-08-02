@@ -22,9 +22,9 @@ class PessoasController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Nome' => 'required',
-            'CPF' => 'required|unique:pessoas',
-            'E-mail' => 'required|unique:pessoas',
+            'nome' => 'required',
+            'cpf' => 'required|unique:pessoas',
+            'email' => 'required|unique:pessoas',
         ]);
     
         $pessoa = Pessoa::create($request->all());
@@ -46,7 +46,7 @@ class PessoasController extends Controller
     public function update(Request $request, Pessoa $pessoa)
     {
         $request->validate([
-            'Nome' => 'required',
+            'nome' => 'required',
         ]);
     
         $pessoa->update($request->all());

@@ -12,12 +12,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pessoas', function (Blueprint $table) {
-            $table->id('Codigo');
-            $table->string('Nome');
-            $table->string('CPF')->unique();
-            $table->string('E-mail')->unique();
-            $table->unsignedBigInteger('Categoria')->default(3);
-            $table->foreign('Categoria')->references('Codigo')->on('categorias');
+            $table->id('codigo');
+            $table->string('nome');
+            $table->string('cpf')->unique();
+            $table->string('email')->unique();
+            $table->unsignedBigInteger('categoria')->default(3);
+            $table->foreign('categoria')->references('codigo')->on('categorias');
             $table->timestamps();
         });
     }

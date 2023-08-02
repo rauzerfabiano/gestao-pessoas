@@ -14,9 +14,9 @@ class CategoriasTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('categorias')->insert([
-            ['Nome' => 'Admin'],
-            ['Nome' => 'Gerente'],
-            ['Nome' => 'Normal'],
+            ['nome' => 'Admin'],
+            ['nome' => 'Gerente'],
+            ['nome' => 'Normal'],
         ]);
     }
 }

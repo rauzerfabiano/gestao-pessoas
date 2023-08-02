@@ -12,8 +12,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->id('Codigo');
-            $table->string('Nome');
+            $table->id('codigo');
+            $table->string('nome');
             $table->timestamps();
         });
     }
