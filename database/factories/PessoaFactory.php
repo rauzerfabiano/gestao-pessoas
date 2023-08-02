@@ -15,7 +15,7 @@ class PessoaFactory extends Factory
             'nome' => $this->faker->name,
             'cpf' => $this->faker->numerify('###.###.###-##'),
             'email' => $this->faker->safeEmail,
-            'categoria' => $this->faker->randomDigitNotNull, // Supondo que seja um número válido em sua tabela 'categorias'
+            'categoria' => rand(2, 4), // Supondo que seja um número válido em sua tabela 'categorias'
             'updated_at' => now(),
             'created_at' => now(),
         ];

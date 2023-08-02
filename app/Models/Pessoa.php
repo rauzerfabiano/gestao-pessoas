@@ -17,7 +17,7 @@ class Pessoa extends Model
 
     public function categoria()
     {
-        return $this->belongsTo(Categoria::class, 'categoria', 'codigo');
+        return $this->hasOne(Categoria::class, 'codigo', 'categoria');
     }
 }
 

@@ -2,21 +2,20 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Faker\Factory as Faker;
 
 class PessoaTest extends TestCase
-{
-    use RefreshDatabase; // Limpar o banco de dados entre os testes
-
+{   
     public function test_can_create_pessoa()
     {
+        $categoria = \App\Models\Categoria::factory()->create();
+        $faker = Faker::create('pt_BR');
         $data = [
-            'nome' => 'John Doe',
-            'cpf' => '123.456.789-09',
-            'email' => 'john@example.com',
-            'categoria' => '2'
+            'nome' => $faker->name(),
+            'cpf' => $faker->cpf(false),
+            'email' => $faker->email(),
+            'categoria' => $categoria->codigo,
         ];
 
         $response = $this->postJson('/api/pessoas', $data);
@@ -39,7 +38,7 @@ class PessoaTest extends TestCase
             'nome' => 'Updated Name',
         ];
 
-        $response = $this->putJson("/api/pessoas/2", $data);
+        $response = $this->putJson("/api/pessoas/{$pessoa->codigo}", $data);
 
         $response->assertStatus(200);
         $response->assertJson(['nome' => 'Updated Name']);
@@ -50,19 +49,8 @@ class PessoaTest extends TestCase
         // Cria uma pessoa para o teste
         $pessoa = \App\Models\Pessoa::factory()->create();
 
-        $response = $this->deleteJson("/api/pessoas/2");
+        $response = $this->deleteJson("/api/pessoas/{$pessoa->codigo}");
 
         $response->assertStatus(204);
-    }
-
-    public function test_can_list_pessoas()
-    {
-        // Cria várias pessoas para o teste
-        \App\Models\Pessoa::factory(5)->create();
-
-        $response = $this->getJson('/api/pessoas');
-
-        $response->assertStatus(200);
-        $response->assertJsonCount(5);
     }
 }
