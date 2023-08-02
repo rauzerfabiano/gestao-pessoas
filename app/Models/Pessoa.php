@@ -9,6 +9,12 @@ class Pessoa extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'codigo';
+
+    protected $fillable = [
+        'nome', 'cpf', 'email', 'categoria',
+    ];
+
     public function categoria()
     {
         return $this->belongsTo(Categoria::class, 'categoria', 'codigo');
